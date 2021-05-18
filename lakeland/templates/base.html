@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <title>AirMOS</title>
+
+        <link rel="icon" href="{% static 'img/logo.png' %}">
+
+        <!-- Bootstrap CSS and JS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+
+    <body>
+        <nav class="navbar">
+          <a class="navbar-brand" href="index">
+            <img src="{% static 'img/logo.png' %}" alt="AirMOS" width="30" height="30">
+            <span id="brand-name">AirMOS</span>
+          </a>
+          <div class="navbar-nav ml-auto">
+            <img src="{% static 'img/login.png' %}" alt="Login" width="30" height="30">
+          </div>
+        </nav>
+        
+    {% block content %}
+
+    {% endblock content %}
+
+      <nav class="navbar fixed-bottom navbar-light bg-light">
+        <div class="navbar-nav ml-auto">
+          <img src="{% static 'img/sdm5.png' %}" alt="SD5 Consulting" height="40px">
+        </div>
+      </nav>
+
+    </body>
+</html>

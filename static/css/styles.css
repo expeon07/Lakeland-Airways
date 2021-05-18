@@ -1,0 +1,51 @@
+body {
+  background-color: #F2F2F2;
+}
+
+.navbar {
+  background-color: #253759;
+}
+
+#brand-name {
+  color: aliceblue;
+}
+
+#home-container {
+  margin-top: 50px;
+  /* background-color:darkgrey; */
+  height: 500px;
+}
+
+.subsystem-box {
+  margin: 20px;
+  height: 200px;
+  font-size: 30px;
+  border-radius: 20px;
+  color:aliceblue;
+  padding: 70px 0;
+}
+
+.subsytem-title {
+  color: aliceblue !important;
+}
+
+.subsytem-title:hover {
+  text-decoration: none;
+  color:sandybrown !important;
+}
+
+#rtis {
+  background-color: #025E73;
+}
+
+#ds {
+  background-color:#7E688C;
+}
+
+#ycs {
+  background-color: #858C4F;
+}
+
+.dummyvalue {
+  color: grey;
+}

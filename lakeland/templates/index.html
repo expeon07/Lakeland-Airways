@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="text-center" style="margin-top: 40px;">
+        <img src="{% static 'img/lakeland.png' %}" alt="Lakeland Airways" height="60px;">
+        <h4 style="margin-top: 10px; color: grey;">
+        Management and Operations System
+        </h4>
+    </div>
+
+    <div class="container" id="home-container">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col text-center subsystem-box" id="rtis">
+                <a href="rtis" class="subsytem-title">RTIS</a>
+            </div>
+            <div class="col text-center subsystem-box" id="ds">
+                <a href="ds" class="subsytem-title">DS</a>
+            </div>
+            <div class="col text-center subsystem-box" id="ycs">
+                <a href="ycs" class="subsytem-title">YCS</a>
+            </div>
+          </div>
+    </div>
+{% endblock content %}
