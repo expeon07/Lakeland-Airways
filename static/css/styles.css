@@ -49,3 +49,26 @@ body {
 .dummyvalue {
   color: grey;
 }
+
+.ds-button {
+  border: 1px solid darkslateblue;
+  color: darkslateblue;
+  margin-right: 20px;
+}
+
+.ds-button:hover {
+  background-color:thistle;
+  color: darkslateblue;
+}
+
+.ds-button.active {
+  background-color: darkslateblue !important;
+  color: thistle !important;
+}
+
+.ds-form {
+  border: 1px solid thistle;
+  padding: 20px;
+  border-radius: 10px;
+}
+

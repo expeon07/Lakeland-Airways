@@ -5,12 +5,12 @@
     <h4 class="text-center">Departure System</h4>
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="pills-checkin-tab" data-toggle="pill" 
+            <a class="nav-link ds-button active" id="pills-checkin-tab" data-toggle="pill" 
                 href="#checkin" role="tab" 
                 aria-controls="pills-checkin" aria-selected="true">Check-In</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="pills-boarding-tab" data-toggle="pill" 
+            <a class="nav-link ds-button" id="pills-boarding-tab" data-toggle="pill" 
                 href="#boarding" role="tab" 
                 aria-controls="pills-boarding" aria-selected="false">Boarding</a>
         </li>
@@ -18,69 +18,35 @@
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="checkin" 
             role="tabpanel" aria-labelledby="pills-checkin-tab">
-            <div class="container" id="checkin-form">
-                <form>
+            <div class="container">
+                <form class="ds-form" style="width: 60%;">
                     <div class="form-group row">
-                        <label for="ticket-id" class="col-sm-2 col-form-label">Ticket ID</label>
-                        <div class="col-sm-10">
+                        <label for="ticket-id" class="col-sm-3 col-form-label">Ticket ID</label>
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="ticket-id" placeholder="Ticket ID">
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                        <label for="ticket-id" class="col-sm-3 col-form-label">Passenger ID</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="passenger-id" placeholder="Passenger ID">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row text-center">
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            <button type="submit" class="btn btn-info">Check-In Passenger</button>
                         </div>
                     </div>
-                    <fieldset class="form-group">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                        <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                            First radio
-                            </label>
-                        </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                        Second radio
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                        <label class="form-check-label" for="gridRadios3">
-                        Third disabled radio
-                        </label>
-                    </div>
-                    </div>
-                </div>
-                </fieldset>
-                <div class="form-group row">
-                    <div class="col-sm-2">Checkbox</div>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                        <label class="form-check-label" for="gridCheck1">
-                            Example checkbox
-                        </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group row text-center">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Check-In Passenger</button>
-                    </div>
-                </div>
               </form>
             </div>
         </div>
 
         <div class="tab-pane fade" id="boarding" 
             role="tabpanel" aria-labelledby="pills-boarding-tab">
-            <div class="container" id="boarding-form">
-                <form>
+            <div class="container">
+                <form class="ds-form">
                     <div class="row">
                         <div class="col">
                             <div class="form-group row">
@@ -114,81 +80,76 @@
                                 <div class="col-sm-2">CIP/VIP</div>
                                 <div class="col-sm-10">
                                     <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">
-                                        
-                                    </label>
+                                        <input class="form-check-input" type="checkbox" id="vipcip">
+                                        <label class="form-check-label" for="vipcip">
+                                        </label>
                                     </div>
+                                    <button class="btn btn-info">Set Seat Number</button>
+                                    <span class="dummyvalue">SeatNumber</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <button class="btn btn-info">Set Seat Number</button>
-                            <span class="dummyvalue">SeatNumber</span>
                         </div>
                     </div>
                     
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="special-needs" class="col-sm-2 col-form-label">Special Needs</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="special-needs" placeholder="Special Needs">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+
                     <div class="form-group row">
-                        <div class="col-sm-2">Special Needs</div>
+                        <div class="col-sm-2">Baggage</div>
                         <div class="col-sm-10">
                             <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="special-needs">
-                            <label class="form-check-label" for="special-needs">
-                                
+                            <input class="form-check-input" type="checkbox" id="baggage">
+                            <label class="form-check-label" for="baggage">
                             </label>
                             </div>
                         </div>
-                        <!-- TODO specify need -->
                     </div>
 
-                    <!-- baggage -->
-                    <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                        </div>
-                    </div>
-                    <fieldset class="form-group">
                     <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                        <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                            First radio
-                            </label>
+                        <div class="col">
+                            <div class="form-group row">
+                                <label for="weight" class="col-sm-2 col-form-label">Weight</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="weight" placeholder="">
+                                </div>
+                            </div>
                         </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                        Second radio
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                        <label class="form-check-label" for="gridRadios3">
-                        Third disabled radio
-                        </label>
-                    </div>
-                    </div>
-                </div>
-                </fieldset>
-                <div class="form-group row">
-                    <div class="col-sm-2">Checkbox</div>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                        <label class="form-check-label" for="gridCheck1">
-                            Example checkbox
-                        </label>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fragile">
+                                <label class="form-check-label" for="fragile">Fragile</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="transit">
+                                <label class="form-check-label" for="transit">Transit</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-info">Set Baggage ID</button>
                         </div>
                     </div>
-                </div>
-                <div class="form-group row text-center">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Check-In Passenger</button>
+
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Issue Boarding Pass</button>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Add more bags</button>
+                        </div>
                     </div>
-                </div>
               </form>
             </div>
         </div>
