@@ -11,7 +11,7 @@ body {
 }
 
 #home-container {
-  margin-top: 50px;
+  margin-top: 10px;
   /* background-color:darkgrey; */
   height: 500px;
 }
@@ -53,7 +53,7 @@ body {
 .ds-button {
   border: 1px solid darkslateblue;
   color: darkslateblue;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .ds-button:hover {
@@ -70,5 +70,37 @@ body {
   border: 1px solid thistle;
   padding: 20px;
   border-radius: 10px;
+}
+
+.rtis-button {
+  border: 1px solid teal;
+  color: teal;
+  margin-right: 10px;
+}
+
+.rtis-button:hover {
+  background-color: lightblue;
+  color: teal;
+}
+
+.rtis-button.active {
+  background-color: teal !important;
+  color: whitesmoke !important;
+}
+
+.ycs-button {
+  border: 1px solid #858C4F;
+  color: #858C4F;
+  margin-right: 10px;
+}
+
+.ycs-button:hover {
+  background-color: lightgoldenrodyellow;
+  color: #858C4F;
+}
+
+.ycs-button.active {
+  background-color: #858C4F !important;
+  color: lightgoldenrodyellow !important;
 }
 

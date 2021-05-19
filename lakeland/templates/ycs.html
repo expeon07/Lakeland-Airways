@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="text-center" style="margin-top: 40px;">
+    <img src="{% static 'img/lakeland.png' %}" alt="Lakeland Airways" height="40px;">
+    <h5 style="margin-top: 10px; color: grey;">
+    AirMOS Yield Control System
+    </h5>
+</div>
+
+<div class="container">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link ycs-button active" id="pills-marketing-tab" data-toggle="pill" 
+                href="#marketing" role="tab" 
+                aria-controls="pills-marketing" aria-selected="true">Marketing Report</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ycs-button" id="pills-sales-tab" data-toggle="pill" 
+                href="#sales" role="tab" 
+                aria-controls="pills-sales" aria-selected="false">Sales Report</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ycs-button" id="pills-promotions-tab" data-toggle="pill" 
+                href="#promotions" role="tab" 
+                aria-controls="pills-promotions" aria-selected="false">Promotions</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link ycs-button" id="pills-evaluation-tab" data-toggle="pill" 
+                href="#evaluation" role="tab" 
+                aria-controls="pills-evaluation" aria-selected="false">Requests/Feedback Evaluation</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="marketing" 
+            role="tabpanel" aria-labelledby="pills-marketing-tab">
+            <div class="container">
+                
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="sales" 
+            role="tabpanel" aria-labelledby="pills-sales-tab">
+            <div class="container sales-graph">
+                <script type="module">
+
+                    import define from "{% static 'js/ycs/ycs.js' %}";
+                    import {Runtime, Library, Inspector} from "{%static 'js/ycs/sales-runtime.js' %}";
+                    
+                    const runtime = new Runtime();
+                    const main = runtime.module(define, Inspector.into(document.querySelector(".sales-graph")));
+                    
+                    </script>
+    
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="promotions" 
+            role="tabpanel" aria-labelledby="pills-promotions-tab">
+            <div class="container">
+    
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="evaluation" 
+            role="tabpanel" aria-labelledby="pills-evaluation-tab">
+            <div class="container">
+    
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+{% endblock content %}
