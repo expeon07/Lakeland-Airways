@@ -35,13 +35,24 @@
         <div class="tab-pane fade show active" id="marketing" 
             role="tabpanel" aria-labelledby="pills-marketing-tab">
             <div class="container">
-                
+                <img src="{% static 'img/marketing-dashboard.png' %}" alt="Sales" width="100%">
+
+                <embed type="text/html" 
+                    src="https://public.datapine.com/?_ga=2.59076461.1500643190.1621499554-48078398.1621499554#board/BqEvdmZInDDRPvgRz8Y8Dy" 
+                    width="500" height="200">
+
+                <object type="text/html" 
+                    data="https://public.datapine.com/?_ga=2.58018410.1500643190.1621499554-48078398.1621499554#board/C7hDIN0IukWqTJ9xyTeLp9"
+                    width="100%">
+                </object>
             </div>
         </div>
 
         <div class="tab-pane fade" id="sales" 
             role="tabpanel" aria-labelledby="pills-sales-tab">
             <div class="container sales-graph">
+                <img src="{% static 'img/sales-dashboard.png' %}" alt="Sales" width="100%">
+
                 <script type="module">
 
                     import define from "{% static 'js/ycs/ycs.js' %}";
@@ -57,7 +68,7 @@
         <div class="tab-pane fade" id="promotions" 
             role="tabpanel" aria-labelledby="pills-promotions-tab">
             <div class="container">
-    
+                
             </div>
         </div>
 

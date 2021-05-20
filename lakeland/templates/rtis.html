@@ -182,7 +182,126 @@
         <div class="tab-pane fade" id="reservation" 
             role="tabpanel" aria-labelledby="pills-reservation-tab">
             <div class="container">
-    
+                <form id="reserve-form">
+                    <div class="form-group row">
+                        <label for="reservation-id" class="col-sm-3 col-form-label">Reservation ID</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="reservation-id"
+                            value="LARES123478">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4 reservation-summary-detail">
+                            <div class="text-center">Departure</div>
+                            Airport: <br>
+                            Date & Time: <br>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-4 reservation-summary-detail">
+                            <div class="text-center">Arrival</div>
+                            Airport: <br>
+                            Date & Time: <br>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+
+                    <hr>
+                    <h6>Passenger Details</h6>
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-3 col-form-label">Passenger Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name"
+                            placeholder="Passenger Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="contact" class="col-sm-3 col-form-label">Contact Number</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="contact"
+                            placeholder="Contact Number">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-3 col-form-label">Email Address</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="email"
+                            placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="memberid" class="col-sm-3 col-form-label">Club Member ID</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="memberid"
+                            placeholder="Premier Club Member ID">
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div>
+                        <h6>Additional Options</h6>
+                        <div class="row">
+                            Add Seat
+                            <br>
+                            <img src="{% static 'img/seatmap.png' %}" alt="airbus" width="100%">
+                                Selected Seat: <span class="dummyvalue">21B</span>
+                            <br>
+                            <br>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary">Reserve Seat</button>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            Add Meal
+                            <br>
+                            <div class="row" style="margin-left: 10px;">
+                                <div class="col meal-option" >
+                                    Meal 1<br>
+                                    Chicken<br>
+                                    Rice<br>
+                                    Bread<br>
+                                    <button type="submit" class="btn btn-sm btn-secondary">Reserve Meal</button>
+                                </div>
+                                <div class="col meal-option">
+                                    Meal 2: Vegan<br>
+                                    Cherry nut granola<br>
+                                    Fresh berries<br>
+                                    Bagel & Jelly<br>
+                                    <button type="submit" class="btn btn-sm btn-secondary">Reserve Meal</button>
+                                </div>
+                                <div class="col meal-option">
+                                    Meal 3: Halal<br>
+                                    Chicken biryani<br>
+                                    Dried Fruits<br>
+                                    Bread<br>
+                                    <button type="submit" class="btn btn-sm btn-secondary">Reserve Meal</button>
+                                </div>
+                                <div class="col meal-option">
+                                    Meal 4: Kosher<br>
+                                    Beef Raviolo<br>
+                                    Apricot Yogurt<br>
+                                    Roasted Potatoes<br>
+                                    <button type="submit" class="btn btn-sm btn-secondary">Reserve Meal</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Confirm & Hold Reservation</button>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Confirm & Proceed to Payment</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
         </div>
 
@@ -191,20 +310,24 @@
             <div class="container">
                 <div id="flight-summary">
                     <h5>Flight Summary</h5>
-                    Reservation ID: 
-                    <input type="text" value="LARES123478">
                     <br>
-                    <br>
+                    <div class="form-group row">
+                        <label for="reservation-id" class="col-sm-3 col-form-label">Reservation ID</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="reservation-id"
+                            value="LARES123478">
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-4 reservation-summary-detail">
-                            Departure <br>
+                            <div class="text-center">Departure</div>
                             Airport: <br>
                             Date & Time: <br>
                         </div>
                         <div class="col-2"></div>
                         <div class="col-4 reservation-summary-detail">
-                            Arrival <br>
+                            <div class="text-center">Arrival</div>
                             Airport: <br>
                             Date & Time: <br>
                         </div>
@@ -214,48 +337,71 @@
 
                 <div id="payment-summary">
                     <div class="row">
-                        <div class="col-4 text-center">
-                            Club Member ID: <input type="text">
-                            Available Miles Points: XXX
+                        <div class="col-5 text-center">
+                            <h5>Premier Club Membership</h5>
+                            <br>
+                            <div class="form-group">
+                                <label for="member_id">Club Member ID</label>
+                                <input type="text" class="form-control" id="member_id" 
+                                    placeholder="7891">
+                              </div>
+                            Available Miles Points: 
+                            <span class="dummyvalue" style="font-size: larger;">45</span>
+                            <br>
                             <br>
                             <button class="btn btn-info">Credit From Miles</button>
                         </div>
-                        <div class="col-8 text-center">
-                            Payment Summary <br>
-                            Total: 00.00
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <h5>Payment Summary</h5>
+                            <br>
+                            Fare: <span class="dummyvalue">EUR 00.00</span><br>
+                            Taxes: <span class="dummyvalue">EUR 00.00</span><br>
+                            Total OB Fees: <span class="dummyvalue">EUR 00.00</span><br>
+                            Fee: <span class="dummyvalue">EUR 00.00</span><br><br>
+                            <span style="font-size: larger;">
+                                Total Amount: <span class="dummyvalue">EUR 00.00</span>
+                            </span>
                         </div>
                     </div>
                 </div>
     
-                <div class="row" id="payment-method">
-                    <div class="col">
-                        <button class="btn btn-info">
-                            Generate Sales Invoice
-                        </button>
-                        InvoiceNumber
-                    </div>
-                    <div class="col">
-                        <h6>Payment Method</h6>
-                            <div class="form-group row" style="margin-left: 10px;">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="card" name="card" class="custom-control-input">
-                                    <label class="custom-control-label" for="card">Card</label>
+                <div id="payment-method">
+                    <h5>Process Payment</h5>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Invoice</h6>
+                            <br>
+                            <button class="btn btn-info">
+                                Generate Sales Invoice
+                            </button>
+                            <br>
+                            <span class="dummyvalue">InvoiceNumber</span>
+                        </div>
+                        <div class="col">
+                            <h6>Payment Method</h6>
+                                <div class="form-group row" style="margin-left: 10px;">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="card" name="card" class="custom-control-input">
+                                        <label class="custom-control-label" for="card">Card</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="cash" name="cash" class="custom-control-input">
+                                        <label class="custom-control-label" for="cash">Cash</label>
+                                    </div>
                                 </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="cash" name="cash" class="custom-control-input">
-                                    <label class="custom-control-label" for="cash">Cash</label>
-                                </div>
-                            </div>
-                        <button class="btn btn-info">
-                            Process Payment
-                        </button>
+                            <button class="btn btn-info">
+                                Process Payment
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <br>
                 <br>
                 <div class="text-center">
                     <button class="btn btn-info">
-                        Complete Purchase
+                        Complete Purchase & Issue Ticket
                     </button>
                 </div>
             </div>

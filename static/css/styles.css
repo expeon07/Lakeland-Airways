@@ -143,6 +143,12 @@ body {
   background-color: lightblue;
 }
 
+#reserve-form {
+  border: 1px solid lightblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .reservation-summary-detail {
   background-color: teal;
   color: whitesmoke;
@@ -170,5 +176,11 @@ body {
 .ycs-button.active {
   background-color: #858C4F !important;
   color: lightgoldenrodyellow !important;
+}
+
+.meal-option {
+  border: 1px solid grey;
+  padding: 5px;
+  margin-left: 10px;
 }
 
