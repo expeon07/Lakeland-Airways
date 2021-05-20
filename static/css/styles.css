@@ -1,3 +1,7 @@
+html { 
+  margin-bottom: 70px;
+}
+
 body {
   background-color: #F2F2F2;
 }
@@ -86,6 +90,70 @@ body {
 .rtis-button.active {
   background-color: teal !important;
   color: whitesmoke !important;
+}
+
+.rtis-form {
+  border: 1px solid lightblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#flight-options-container {
+  border: 1px solid teal;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.date-btn {
+  border-radius: 50px;
+  border: 1px solid teal;
+  background-color: whitesmoke;
+  color: teal;
+}
+
+.date-btn.active {
+  border: 1px solid teal;
+  background-color: teal;
+  color: whitesmoke;
+}
+
+.flight-results {
+  padding: 20px;
+}
+
+.ticket-option {
+  text-align: center;
+}
+
+.ticket-time {
+  border: 1px solid teal;
+  padding: 10px;
+}
+
+.ticket-base {
+  border: 1px solid teal;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.reserve-btn {
+  background-color: lightblue;
+}
+
+.reservation-summary-detail {
+  background-color: teal;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+#flight-summary, #payment-summary, #payment-method {
+  border: 1px solid teal;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .ycs-button {
