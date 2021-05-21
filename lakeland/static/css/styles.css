@@ -1,0 +1,199 @@
+html { 
+  margin-bottom: 70px;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+.navbar {
+  background-color: #253759;
+}
+
+#brand-name {
+  color: aliceblue;
+}
+
+#home-container {
+  margin-top: 10px;
+  /* background-color:darkgrey; */
+  height: 500px;
+}
+
+.subsystem-box {
+  margin: 20px;
+  height: 200px;
+  font-size: 30px;
+  border-radius: 20px;
+  color:aliceblue;
+  padding: 70px 0;
+}
+
+.subsytem-title {
+  color: aliceblue !important;
+}
+
+.subsytem-title:hover {
+  text-decoration: none;
+  color:sandybrown !important;
+}
+
+#rtis {
+  background-color: #025E73;
+}
+
+#ds {
+  background-color:#7E688C;
+}
+
+#ycs {
+  background-color: #858C4F;
+}
+
+.dummyvalue {
+  color: grey;
+}
+
+.ds-button {
+  border: 1px solid darkslateblue;
+  color: darkslateblue;
+  margin-right: 10px;
+}
+
+.ds-button:hover {
+  background-color:thistle;
+  color: darkslateblue;
+}
+
+.ds-button.active {
+  background-color: darkslateblue !important;
+  color: thistle !important;
+}
+
+.ds-form {
+  border: 1px solid thistle;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.rtis-button {
+  border: 1px solid teal;
+  color: teal;
+  margin-right: 10px;
+}
+
+.rtis-button:hover {
+  background-color: lightblue;
+  color: teal;
+}
+
+.rtis-button.active {
+  background-color: teal !important;
+  color: whitesmoke !important;
+}
+
+.rtis-form {
+  border: 1px solid lightblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#flight-options-container {
+  border: 1px solid teal;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.date-btn {
+  border-radius: 50px;
+  border: 1px solid teal;
+  background-color: whitesmoke;
+  color: teal;
+}
+
+.date-btn.active {
+  border: 1px solid teal;
+  background-color: teal;
+  color: whitesmoke;
+}
+
+.flight-results {
+  padding: 20px;
+}
+
+.ticket-option {
+  text-align: center;
+}
+
+.ticket-time {
+  border: 1px solid teal;
+  padding: 10px;
+}
+
+.ticket-base {
+  border: 1px solid teal;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.reserve-btn {
+  background-color: lightblue;
+}
+
+#reserve-form {
+  border: 1px solid lightblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.reservation-summary-detail {
+  background-color: teal;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+#flight-summary, #payment-summary, #payment-method {
+  border: 1px solid teal;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.ycs-button {
+  border: 1px solid #858C4F;
+  color: #858C4F;
+  margin-right: 10px;
+}
+
+.ycs-button:hover {
+  background-color: lightgoldenrodyellow;
+  color: #858C4F;
+}
+
+.ycs-button.active {
+  background-color: #858C4F !important;
+  color: lightgoldenrodyellow !important;
+}
+
+.meal-option {
+  border: 1px solid grey;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.ycs-form {
+  border: 1px solid goldenrod;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ycs-section {
+  border: 1px solid #858C4F;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
