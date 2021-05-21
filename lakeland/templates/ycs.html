@@ -13,12 +13,12 @@
         <li class="nav-item">
             <a class="nav-link ycs-button active" id="pills-marketing-tab" data-toggle="pill" 
                 href="#marketing" role="tab" 
-                aria-controls="pills-marketing" aria-selected="true">Marketing Report</a>
+                aria-controls="pills-marketing" aria-selected="true">Marketing Dashboard</a>
         </li>
         <li class="nav-item">
             <a class="nav-link ycs-button" id="pills-sales-tab" data-toggle="pill" 
                 href="#sales" role="tab" 
-                aria-controls="pills-sales" aria-selected="false">Sales Report</a>
+                aria-controls="pills-sales" aria-selected="false">Sales Dashboard</a>
         </li>
         <li class="nav-item">
             <a class="nav-link ycs-button" id="pills-promotions-tab" data-toggle="pill" 
@@ -30,54 +30,377 @@
                 href="#evaluation" role="tab" 
                 aria-controls="pills-evaluation" aria-selected="false">Requests/Feedback Evaluation</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link ycs-button" id="pills-prediction-tab" data-toggle="pill" 
+                href="#prediction" role="tab" 
+                aria-controls="pills-prediction" aria-selected="false">Demand Prediction</a>
+        </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="marketing" 
             role="tabpanel" aria-labelledby="pills-marketing-tab">
             <div class="container">
-                <img src="{% static 'img/marketing-dashboard.png' %}" alt="Sales" width="100%">
-
-                <embed type="text/html" 
+                <form class="ycs-form">
+                    <h6>Filter Results</h6>
+                    <div class="row" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <select class="form-control" id="year">
+                                    <option>All</option>
+                                    <option>2012</option>
+                                    <option>2013</option>
+                                    <option>2014</option>
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="month">Month</label>
+                                <select class="form-control" id="month">
+                                    <option>All</option>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-secondary">Filter Marketing Data</button>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Export Data</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- <img src="{% static 'img/marketing-dashboard.png' %}" alt="Sales" width="100%"> -->
+                <div class="ycs-section">
+                    <embed type="text/html" 
                     src="https://public.datapine.com/?_ga=2.59076461.1500643190.1621499554-48078398.1621499554#board/BqEvdmZInDDRPvgRz8Y8Dy" 
-                    width="500" height="200">
-
-                <object type="text/html" 
-                    data="https://public.datapine.com/?_ga=2.58018410.1500643190.1621499554-48078398.1621499554#board/C7hDIN0IukWqTJ9xyTeLp9"
-                    width="100%">
-                </object>
+                    width="100%" height="550px">
+                </div>
             </div>
         </div>
 
         <div class="tab-pane fade" id="sales" 
             role="tabpanel" aria-labelledby="pills-sales-tab">
             <div class="container sales-graph">
-                <img src="{% static 'img/sales-dashboard.png' %}" alt="Sales" width="100%">
+                <form class="ycs-form">
+                    <h6>Filter Results</h6>
+                    <div class="row" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <select class="form-control" id="year">
+                                    <option>All</option>
+                                    <option>2012</option>
+                                    <option>2013</option>
+                                    <option>2014</option>
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="month">Month</label>
+                                <select class="form-control" id="month">
+                                    <option>All</option>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-secondary">Filter Sales Data</button>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Export Data</button>
+                        </div>
+                    </div>
+                </form>
 
-                <script type="module">
-
-                    import define from "{% static 'js/ycs/ycs.js' %}";
-                    import {Runtime, Library, Inspector} from "{%static 'js/ycs/sales-runtime.js' %}";
-                    
-                    const runtime = new Runtime();
-                    const main = runtime.module(define, Inspector.into(document.querySelector(".sales-graph")));
-                    
-                </script>
+                <!-- <img src="{% static 'img/sales-dashboard.png' %}" alt="Sales" width="100%"> -->
+                <div class="ycs-section">
+                    <object type="text/html" 
+                        data="https://public.datapine.com/?_ga=2.58018410.1500643190.1621499554-48078398.1621499554#board/C7hDIN0IukWqTJ9xyTeLp9"
+                        width="100%" height="550px">
+                    </object>
+                </div>
             </div>
         </div>
 
         <div class="tab-pane fade" id="promotions" 
             role="tabpanel" aria-labelledby="pills-promotions-tab">
             <div class="container">
-                
+                <h5>Mailshot Promotions</h5>
+                <form class="ycs-form">
+                    <h6>Select Customers</h6>
+                    <div class="row" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="age-group">Customer Age Group</label>
+                                <select class="form-control" id="age-group">
+                                    <option>All</option>
+                                    <option>20 and below</option>
+                                    <option>20-30</option>
+                                    <option>30-40</option>
+                                    <option>40-50</option>
+                                    <option>50-60</option>
+                                    <option>60 and above</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="location">Customer Continent</label>
+                                <select class="form-control" id="location">
+                                    <option>All</option>
+                                    <option>Africa</option>
+                                    <option>Asia</option>
+                                    <option>Europe</option>
+                                    <option>North America</option>
+                                    <option>South America</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="country">Customer Country</label>
+                                <select class="form-control" id="country">
+                                    <!-- Europe Only!!! -->
+                                    <option>All</option>
+                                    <option>Belgium</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                    <option>Greece</option>
+                                    <option>Italy</option>
+                                    <option>Spain</option>
+                                    <option>United Kingdom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-secondary">Filter Customers</button>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Export Customers List</button>
+                        </div>
+                    </div>
+                </form>
             </div>
+            <div class="ycs-section">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Customer ID</th>
+                        <th scope="col">Club Member ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Address</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">3451</th>
+                        <td>1231</td>
+                        <td>Elon</td>
+                        <td>Musk</td>
+                        <td>emusk@tesla.com</td>
+                        <td>Address Street, State, Country</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1340</th>
+                        <td>01142</td>
+                        <td>Henry</td>
+                        <td>Cavill</td>
+                        <td>henry.cavill@justiceleague.com</td>
+                        <td>Address Street, State, United Kingdom</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+            <div class="ycs-section">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Email Content</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                    </div>
+                    <div class="form-group">
+                    <label for="exampleFormControlFile1">Include Image</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                </form>
+            </div>
+    
+            <div class="form-group row text-center" style="margin-top: 10px;">
+                <div class="col">
+                    <button type="submit" class="btn btn-info">Send Promotions to Selected Customers</button>
+                </div>
+            </div>
+
         </div>
+
+        
 
         <div class="tab-pane fade" id="evaluation" 
             role="tabpanel" aria-labelledby="pills-evaluation-tab">
             <div class="container">
-    
+                <form class="ycs-form">
+                    <h6>Filter Requests and Feedback based on Customer Profile</h6>
+                    <div class="row" style="padding-left: 20px; padding-right: 20px;">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="age-group">Customer Age Group</label>
+                                <select class="form-control" id="age-group">
+                                    <option>All</option>
+                                    <option>20 and below</option>
+                                    <option>20-30</option>
+                                    <option>30-40</option>
+                                    <option>40-50</option>
+                                    <option>50-60</option>
+                                    <option>60 and above</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="location">Customer Continent</label>
+                                <select class="form-control" id="location">
+                                    <option>All</option>
+                                    <option>Africa</option>
+                                    <option>Asia</option>
+                                    <option>Europe</option>
+                                    <option>North America</option>
+                                    <option>South America</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="country">Customer Country</label>
+                                <select class="form-control" id="country">
+                                    <!-- Europe Only!!! -->
+                                    <option>All</option>
+                                    <option>Belgium</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                    <option>Greece</option>
+                                    <option>Italy</option>
+                                    <option>Spain</option>
+                                    <option>United Kingdom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-secondary">Filter Customers</button>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Export Customers List</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="ycs-section">
+                    <h6>Inquiry Results</h6>
+                    <div class="form-group row text-center" style="margin-top: 10px;">
+                        <div class="col">
+                            <button type="submit" class="btn btn-info">Export List</button>
+                        </div>
+                    </div>
+
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Club Member ID</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Address</th>  
+                            <th scope="col">Type</th>                          
+                            <th scope="col">Message Content</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">3451</th>
+                            <td>1231</td>
+                            <td>Elon</td>
+                            <td>Musk</td>
+                            <td>emusk@tesla.com</td>
+                            <td>Address Street, State, Country</td>
+                            <td>New Route Request</td>
+                            <td>I want a direct flight from LAX to NRT.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1340</th>
+                            <td>01142</td>
+                            <td>Henry</td>
+                            <td>Cavill</td>
+                            <td>henry.cavill@justiceleague.com</td>
+                            <td>Address Street, State, United Kingdom</td>
+                            <td>Feedback</td>
+                            <td>I need larger seats.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
             </div>
         </div>
+
+        <div class="tab-pane fade show active" id="prediction" 
+            role="tabpanel" aria-labelledby="pills-prediction-tab">
+            <div class="container">
 
     </div>
 </div>
