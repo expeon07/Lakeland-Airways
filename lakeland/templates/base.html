@@ -15,7 +15,7 @@
     </head>
 
     <body>
-      <nav class="navbar">
+      <nav class="navbar fixed-top">
         <a class="navbar-brand" href="/">
           <img src="{% static 'img/logo.png' %}" alt="AirMOS" width="30" height="30">
           <span id="brand-name">AirMOS</span>
@@ -24,6 +24,8 @@
           <img src="{% static 'img/login.png' %}" alt="Login" width="30" height="30">
         </div>
       </nav>
+
+      <div style="margin-bottom: 100px;"></div>
         
     {% block content %}
 
