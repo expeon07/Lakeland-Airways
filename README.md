@@ -1,2 +1,3 @@
 # lakeland
-For Software Development Methodologies class
+For Software Development Methodologies class using Django framework
+
