@@ -1,3 +1,3 @@
-# lakeland
-For Software Development Methodologies class using Django framework
+# Lakeland Airways
+Dummy Website for Software Development Methodologies class using Django framework
 
